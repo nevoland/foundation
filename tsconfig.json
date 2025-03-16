@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "es2020",
     "useDefineForClassFields": true,
-    "module": "Preserve",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "preserve",
+    "lib": ["es2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "noErrorTruncation": true,
 
+    "erasableSyntaxOnly": true,
     "moduleDetection": "force",
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
