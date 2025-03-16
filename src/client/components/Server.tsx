@@ -4,6 +4,8 @@ import { EMPTY_ARRAY } from "unchangeable";
 
 import { useMemo } from "../dependencies.js";
 
+import { add } from "#lib";
+
 export type ServerProps = {};
 
 const { fetch } = getGlobal();
@@ -20,7 +22,7 @@ export function Server(_: ServerProps) {
     return <span class="text-red-400">The server is not running</span>;
   }
 
-  if (result.status !== "fulfilled") {
+  if (result.status !== "fulfilled" || add(0, 0)) {
     return null;
   }
 

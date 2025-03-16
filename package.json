@@ -25,6 +25,10 @@
     "doc/",
     "!doc/.nojekyll"
   ],
+  "imports": {
+    "#lib": "./lib/main.ts",
+    "#lib/": "./lib/"
+  },
   "scripts": {
     "dev": "npm run start -- --watch-path=src/server --env-file-if-exists=.development.env",
     "start": "node --env-file=.env --experimental-strip-types --disable-warning=ExperimentalWarning src/server/main.ts",
