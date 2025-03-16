@@ -80,9 +80,9 @@
     "typedoc-plugin-markdown": "^4.5.0",
     "typescript": "^5.8.2",
     "unchangeable": "^1.7.3",
-    "vite": "^5.4.14",
+    "vite": "^6.2.2",
     "vite-plugin-module-list": "^2.2.2",
-    "vitest": "^2.1.9"
+    "vitest": "^3.0.8"
   },
   "dependencies": {
     "@types/express": "^5.0.0",
