@@ -21,6 +21,7 @@
 ### Setup
 
 - `nvm install`
+- `cp .env.template .env.local`
 - `npm install`
 
 ### Library mode
@@ -54,6 +55,7 @@ Develop on the application:
 Build and run:
 
 - `npm run build:app`
+- OPTIONAL: `export ENV_PATH=path/to/extra/dot_env/file`
 - `npm start`
 
 <!-- Delete end -->

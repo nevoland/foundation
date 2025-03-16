@@ -30,8 +30,9 @@
     "#lib/": "./lib/"
   },
   "scripts": {
-    "dev": "npm run start -- --watch-path=src/server --env-file-if-exists=.development.env",
-    "start": "node --env-file=.env --experimental-strip-types --disable-warning=ExperimentalWarning src/server/main.ts",
+    "with": "node --env-file=${npm_config_env:-.env.local} $(which npm)",
+    "dev": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --env-file-if-exists=${ENV_PATH:-.env.local} --experimental-strip-types --disable-warning=ExperimentalWarning --watch-path=src/server src/server/main.ts",
+    "start": "node --env-file-if-exists=.env --env-file-if-exists=${ENV_PATH:-.env} --experimental-strip-types --disable-warning=ExperimentalWarning src/server/main.ts",
     "dev:test": "vitest --update --root=./",
     "test": "npm run lint && npm run format && vitest run --root=./",
     "build:lib": "rm -rf dist; tsc --project tsconfig.package.json",
