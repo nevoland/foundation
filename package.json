@@ -31,7 +31,7 @@
   },
   "scripts": {
     "with": "node --env-file=${npm_config_env:-.env.local} $(which npm)",
-    "dev": "node --env-file=.env --env-file-if-exists=.env.local --watch-path=./src/server --watch-preserve-output src/server/main.ts",
+    "dev": "node src/server/watch.js",
     "start": "node --env-file-if-exists=.env --env-file-if-exists=${ENV_PATH:-.env} --experimental-strip-types --disable-warning=ExperimentalWarning src/server/main.ts",
     "dev:test": "vitest --update --root=./",
     "test": "npm run lint && npm run format && vitest run --root=./",
