@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "noEmit": false,
+    "rootDir": "./lib",
     "outDir": "./dist",
     "sourceMap": true,
     "declaration": true,
