@@ -19,6 +19,7 @@ export default defineConfig({
     },
     sourcemap: true,
   },
+  cacheDir: resolve("./vite"),
   clearScreen: false,
   plugins: [
     moduleList({

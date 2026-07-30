@@ -1,4 +1,4 @@
 export default {
-  plugins: ["prettier-plugin-tailwindcss"],
+  plugins: ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
   tailwindFunctions: ["clsx"],
 };

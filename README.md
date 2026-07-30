@@ -13,7 +13,6 @@
 - [Vitest](https://vitest.dev)
 - [TypeScript](https://www.typescriptlang.org)
 - [Prettier](https://prettier.io)
-- [Eslint](https://eslint.org)
 - [Tailwind](https://tailwindcss.com)
 - [Typedoc](https://typedoc.org)
 - [NVM](https://github.com/nvm-sh/nvm)
