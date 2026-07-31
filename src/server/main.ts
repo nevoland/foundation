@@ -1,3 +1,5 @@
+import { createServer as createHttpServer } from "node:http";
+
 import express from "express";
 import { createServer as createViteServer } from "vite";
 
@@ -8,9 +10,9 @@ async function main(
   port = process.env.PORT ?? "5173",
   hostname = process.env.HOSTNAME ?? "",
   production = process.env.NODE_ENV === "production",
-  hmrPort = process.env.HMR_PORT ?? "3000",
 ) {
   const app = express();
+  const server = createHttpServer(app);
 
   app.use(requestLogger);
 
@@ -27,17 +29,17 @@ async function main(
     const vite = await createViteServer({
       appType: "spa",
       server: {
-        hmr: { port: hmrPort == null ? undefined : +hmrPort },
+        hmr: { server },
         middlewareMode: true,
       },
     });
     app.use(vite.middlewares);
     logger.info(
-      `Using development server listening on http://localhost:${port} and hot module reload on ws://localhost:${hmrPort}`,
+      `Using development server listening on http://localhost:${port} with hot module reload`,
     );
   }
 
-  app.listen(+port, hostname);
+  server.listen(+port, hostname);
 }
 
 main();
